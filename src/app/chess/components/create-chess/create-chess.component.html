@@ -1,0 +1,75 @@
+<div class="create-chess">
+  <!-- Board -->
+  <div class="board">
+    <ul class="pieces list-inline">
+      <li
+        class="piece-item"
+        *ngFor="let piece of pieces; let i = index"
+        (click)="onSelectBoard(i)"
+        (contextmenu)="onDeletePiece(i)"
+      >
+        <ng-container [ngSwitch]="piece">
+          <ng-container *ngSwitchCase="1">
+            <img *ngIf="posPieceSelected == i" [src]="'/assets/images/' + color[i] + 'chot_marked.png'">
+            <img *ngIf="posPieceSelected != i" [src]="'/assets/images/' + color[i] + 'chot.png'">
+          </ng-container>
+          <ng-container *ngSwitchCase="2">
+            <img *ngIf="posPieceSelected == i" [src]="'/assets/images/' + color[i] + 'sy_marked.png'">
+            <img *ngIf="posPieceSelected != i" [src]="'/assets/images/' + color[i] + 'sy.png'">
+          </ng-container>
+          <ng-container *ngSwitchCase="3">
+            <img *ngIf="posPieceSelected == i" [src]="'/assets/images/' + color[i] + 'tinh_marked.png'">
+            <img *ngIf="posPieceSelected != i" [src]="'/assets/images/' + color[i] + 'tinh.png'">
+          </ng-container>
+          <ng-container *ngSwitchCase="4">
+            <img *ngIf="posPieceSelected == i" [src]="'/assets/images/' + color[i] + 'ma_marked.png'">
+            <img *ngIf="posPieceSelected != i" [src]="'/assets/images/' + color[i] + 'ma.png'">
+          </ng-container>
+          <ng-container *ngSwitchCase="5">
+            <img *ngIf="posPieceSelected == i" [src]="'/assets/images/' + color[i] + 'phao_marked.png'">
+            <img *ngIf="posPieceSelected != i" [src]="'/assets/images/' + color[i] + 'phao.png'">
+          </ng-container>
+          <ng-container *ngSwitchCase="6">
+            <img *ngIf="posPieceSelected == i" [src]="'/assets/images/' + color[i] + 'xe_marked.png'">
+            <img *ngIf="posPieceSelected != i" [src]="'/assets/images/' + color[i] + 'xe.png'">
+          </ng-container>
+          <ng-container *ngSwitchCase="7">
+            <img *ngIf="posPieceSelected == i" [src]="'/assets/images/' + color[i] + 'tuong_marked.png'">
+            <img *ngIf="posPieceSelected != i" [src]="'/assets/images/' + color[i] + 'tuong.png'">
+          </ng-container>
+        </ng-container>
+      </li>
+    </ul>
+  </div>
+  <!-- End board -->
+
+  <!-- List piece -->
+  <div class="list-piece-add">
+    <ul class="pieces">
+      <li>
+        <img [src]="'/assets/images/1chot.png'" (click)="onAddPiece(1, 1)">
+        <img [src]="'/assets/images/1sy.png'" (click)="onAddPiece(2, 1)">
+        <img [src]="'/assets/images/1tinh.png'" (click)="onAddPiece(3, 1)">
+        <img [src]="'/assets/images/1ma.png'" (click)="onAddPiece(4, 1)">
+        <img [src]="'/assets/images/1phao.png'" (click)="onAddPiece(5, 1)">
+        <img [src]="'/assets/images/1xe.png'" (click)="onAddPiece(6, 1)">
+        <img [src]="'/assets/images/1tuong.png'" (click)="onAddPiece(7, 1)">
+      </li>
+      <li>
+        <img [src]="'/assets/images/2chot.png'" (click)="onAddPiece(1, 2)">
+        <img [src]="'/assets/images/2sy.png'" (click)="onAddPiece(2, 2)">
+        <img [src]="'/assets/images/2tinh.png'" (click)="onAddPiece(3, 2)">
+        <img [src]="'/assets/images/2ma.png'" (click)="onAddPiece(4, 2)">
+        <img [src]="'/assets/images/2phao.png'" (click)="onAddPiece(5, 2)">
+        <img [src]="'/assets/images/2xe.png'" (click)="onAddPiece(6, 2)">
+        <img [src]="'/assets/images/2tuong.png'" (click)="onAddPiece(7, 2)">
+      </li>
+    </ul>
+    <div class="action-board">
+      <button (click)="onResetBoard()">Reset board</button>
+      <button (click)="onEmptyBoard()">Empty board</button>
+      <button (click)="onSaveBoard()">OK</button>
+    </div>
+  </div>
+  <!-- End list piece -->
+</div>

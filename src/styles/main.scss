@@ -1,0 +1,44 @@
+@import "helpers/all";
+@import "base/all";
+
+.create-chess {
+  @extend %flex;
+}
+
+.board {
+  @include boxSize(483px, 500px);
+  @include background-image('banco.png');
+  @extend %no-background-repeat;
+
+  flex-shrink: 0;
+  margin: 0 30px;
+
+  .pieces {
+    padding: 0px 1px;
+
+    .piece-item {
+      @include boxSize(42px, 42px);
+      @extend %no-padding;
+
+      margin: 1.5px 6px;
+
+      img {
+        @extend %vertical-baseline;
+      }
+    }
+  }
+}
+
+.list-piece-add {
+  .pieces {
+    @extend %flex;
+
+    li {
+      @extend %flex-column;
+    }
+  }
+
+  .action-board {
+    margin-top: 20px;
+  }
+}
