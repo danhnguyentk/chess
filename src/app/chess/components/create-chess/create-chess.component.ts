@@ -2,6 +2,11 @@ import {
   Component,
   OnInit
 } from '@angular/core';
+import {
+  NavigationExtras,
+  Router
+} from '@angular/router';
+
 import { AppConfig } from '../../../core/common/services/app-config.service';
 
 @Component({
@@ -20,7 +25,7 @@ export class CreateChessComponent implements OnInit {
 
   posPieceSelected: number; // piece is selected
 
-  constructor(private appConfig: AppConfig) { }
+  constructor(private appConfig: AppConfig, public router: Router) { }
 
   ngOnInit() {
   }
@@ -84,8 +89,8 @@ export class CreateChessComponent implements OnInit {
     Empty board
    */
   onSaveBoard() {
-    this.pieces = this.appConfig.PIECES_EMPTY;
-    this.color = this.appConfig.COLOR_EMPTY;
+    const navigationExtras: NavigationExtras = { queryParams: { pieces: this.pieces, color: this.color } };
+    this.router.navigate(['play-chess'], navigationExtras);
   }
 
   /*

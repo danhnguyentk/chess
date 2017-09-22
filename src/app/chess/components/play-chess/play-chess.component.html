@@ -1,0 +1,51 @@
+<div class="play-chess">
+  <!-- Board -->
+  <div class="board">
+    <ul class="pieces list-inline">
+      <li
+        class="piece-item"
+        *ngFor="let piece of pieces; let i = index"
+        (click)="onSelectBoard(i)"
+      >
+        <ng-container [ngSwitch]="piece">
+          <ng-container *ngSwitchCase="1">
+            <img *ngIf="posPieceSelected == i" [src]="'/assets/images/' + color[i] + 'chot_marked.png'">
+            <img *ngIf="posPieceSelected != i" [src]="'/assets/images/' + color[i] + 'chot.png'">
+          </ng-container>
+          <ng-container *ngSwitchCase="2">
+            <img *ngIf="posPieceSelected == i" [src]="'/assets/images/' + color[i] + 'sy_marked.png'">
+            <img *ngIf="posPieceSelected != i" [src]="'/assets/images/' + color[i] + 'sy.png'">
+          </ng-container>
+          <ng-container *ngSwitchCase="3">
+            <img *ngIf="posPieceSelected == i" [src]="'/assets/images/' + color[i] + 'tinh_marked.png'">
+            <img *ngIf="posPieceSelected != i" [src]="'/assets/images/' + color[i] + 'tinh.png'">
+          </ng-container>
+          <ng-container *ngSwitchCase="4">
+            <img *ngIf="posPieceSelected == i" [src]="'/assets/images/' + color[i] + 'ma_marked.png'">
+            <img *ngIf="posPieceSelected != i" [src]="'/assets/images/' + color[i] + 'ma.png'">
+          </ng-container>
+          <ng-container *ngSwitchCase="5">
+            <img *ngIf="posPieceSelected == i" [src]="'/assets/images/' + color[i] + 'phao_marked.png'">
+            <img *ngIf="posPieceSelected != i" [src]="'/assets/images/' + color[i] + 'phao.png'">
+          </ng-container>
+          <ng-container *ngSwitchCase="6">
+            <img *ngIf="posPieceSelected == i" [src]="'/assets/images/' + color[i] + 'xe_marked.png'">
+            <img *ngIf="posPieceSelected != i" [src]="'/assets/images/' + color[i] + 'xe.png'">
+          </ng-container>
+          <ng-container *ngSwitchCase="7">
+            <img *ngIf="posPieceSelected == i" [src]="'/assets/images/' + color[i] + 'tuong_marked.png'">
+            <img *ngIf="posPieceSelected != i" [src]="'/assets/images/' + color[i] + 'tuong.png'">
+          </ng-container>
+        </ng-container>
+      </li>
+    </ul>
+  </div>
+  <!-- End board -->
+
+  <div class="history-move">
+    <h3>History move</h3>
+    <ul class="history-move-content">
+      <li *ngFor="let move of moves">{{ move.oldPos }} - {{ move.newPos }}</li>
+    </ul>
+  </div>
+</div>

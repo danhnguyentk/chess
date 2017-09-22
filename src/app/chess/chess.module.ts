@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { CreateChessComponent } from './components/create-chess/create-chess.component';
 import { ROUTING } from './chess-routing.module';
+import { PlayChessComponent } from './components/play-chess/play-chess.component';
 
 const MODULES = [
   RouterModule,
@@ -18,7 +19,8 @@ const DIRECTIVES = [
 ];
 
 const COMPONENTS = [
-  CreateChessComponent
+  CreateChessComponent,
+  PlayChessComponent
 ];
 
 const SERVICES = [
@@ -47,6 +49,6 @@ const SERVICES = [
   imports: [
     CommonModule
   ],
-  declarations: [ ...COMPONENTS ]
+  declarations: [ ...COMPONENTS, PlayChessComponent ]
 })
 export class ChessModule { }

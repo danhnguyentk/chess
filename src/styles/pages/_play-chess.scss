@@ -1,0 +1,21 @@
+.play-chess {
+  @extend %flex;
+
+  .history-move {
+    font-size: 18px;
+    border: 2px solid;
+    padding: 10px;
+  }
+
+  .history-move-content {
+    margin-top: 20px;
+
+    li {
+      padding: 5px;
+    }
+
+    li:last-child {
+      color: green;
+    }
+  }
+}
