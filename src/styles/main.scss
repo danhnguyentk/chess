@@ -1,6 +1,7 @@
 @import "helpers/all";
 @import "base/all";
 @import 'pages/all';
+@import 'components/all';
 
 .create-chess {
   @extend %flex;

@@ -1,0 +1,7 @@
+.user-dropdown {
+  .avatar {
+    @include boxSize(50px, 50px);
+
+    border-radius: 50%;
+  }
+}

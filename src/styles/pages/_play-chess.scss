@@ -2,19 +2,25 @@
   @extend %flex;
 
   .history-move {
+    @extend %overflow-auto;
+
+    height: 500px;
     font-size: 18px;
     border: 2px solid;
     padding: 10px;
+    width: 165px;
   }
 
   .history-move-content {
     margin-top: 20px;
 
     li {
+      @extend %inline-block;
+
       padding: 5px;
     }
 
-    li:last-child {
+    .current-move {
       color: green;
     }
   }

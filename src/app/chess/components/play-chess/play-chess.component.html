@@ -42,10 +42,12 @@
   </div>
   <!-- End board -->
 
-  <div class="history-move">
-    <h3>History move</h3>
+  <div #scrollHistoryMove class="history-move">
+    <button [disabled]="currentIndexMove < 0" (click)="onBackMove()">Back Move</button>
+    <button [disabled]="currentIndexMove > moves.length - 2" (click)="onNextMove()">Next Move</button>
+    <button (click)="onSaveMove()">Save Move</button>
     <ul class="history-move-content">
-      <li *ngFor="let move of moves">{{ move.oldPos }} - {{ move.newPos }}</li>
+      <li *ngFor="let move of moves; let i = index" [ngClass]="{'current-move': currentIndexMove === i}">{{move | signMove}}</li>
     </ul>
   </div>
 </div>

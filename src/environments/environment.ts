@@ -6,5 +6,13 @@
 export const environment = {
   production: false,
   LOG_LEVEL: 5, // Debug log
-  ROOT_URL: 'http:/firebase.com'
+  ROOT_URL: 'http:/firebase.com',
+  firebaseConfig: {
+    apiKey: 'AIzaSyCHplG7A-jjpYhkOu48FqQKtHZTVnvdhzs',
+    authDomain: 'chess-app-b4368.firebaseapp.com',
+    databaseURL: 'https://chess-app-b4368.firebaseio.com',
+    projectId: 'chess-app-b4368',
+    storageBucket: '',
+    messagingSenderId: '971441285958'
+  }
 };

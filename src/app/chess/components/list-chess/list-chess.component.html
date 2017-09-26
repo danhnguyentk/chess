@@ -1,0 +1,8 @@
+<div class="wrapper-list-chess">
+  <h2>List Chess</h2>
+  <ul class="list-chess">
+    <li *ngFor="let chess of listChess">
+      <a class="nameChess" (click)="onPlayChess(chess)">{{ chess.name || 'Default chess' }}</a>
+    </li>
+  </ul>
+</div>

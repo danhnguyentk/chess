@@ -65,10 +65,15 @@
         <img [src]="'/assets/images/2tuong.png'" (click)="onAddPiece(7, 2)">
       </li>
     </ul>
+    <div class="form-group">
+      <label>Name chess</label>
+      <input type="text" class="form-control" #nameChess>
+      <div class="text-danger" *ngIf="showErrorAdd">This field is required</div>
+    </div>
     <div class="action-board">
       <button (click)="onResetBoard()">Reset board</button>
       <button (click)="onEmptyBoard()">Empty board</button>
-      <button (click)="onSaveBoard()">OK</button>
+      <button (click)="onSaveBoard(nameChess.value)">OK</button>
     </div>
   </div>
   <!-- End list piece -->

@@ -1,0 +1,13 @@
+.wrapper-list-chess {
+  width: 500px;
+  margin: 0 auto;
+
+  .list-chess {
+    margin-top: 20px;
+  }
+
+  .nameChess {
+    @extend %cursor-pointer;
+    font-size: 18px;
+  }
+}

@@ -97,4 +97,10 @@ export class AppConfig {
   VALIDATIONS = {
     EMAIL_PATTERN: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
   };
+
+  USER_INFO_DEFAULT = {
+    avatar: 'Default avart',
+    name: 'Default name',
+    email: 'Default email'
+  }
 }

@@ -26,6 +26,10 @@ button {
   }
 }
 
+button[disabled] {
+  opacity: 0.5;
+}
+
 ul {
   @extend %no-margin;
   @extend %no-padding;

@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 
 import { UserToken } from '../../../auth/models/user-token.model';
+import { UserInfo } from '../../../auth/models/user-info.model';
 
 @Injectable()
 export class LocalStorageService {
   private CURRENT_USER_TOKEN_KEY: string = 'userToken';
+  private CURRENT_USER_KEY: string = 'userInfo';
 
   constructor() { }
 
@@ -30,5 +32,17 @@ export class LocalStorageService {
 
   removeCurrentUserToken() {
     return this.removeItem(this.CURRENT_USER_TOKEN_KEY);
+  }
+
+  setCurrentUserInfo(value: any) {
+    this.setItem(this.CURRENT_USER_KEY, value);
+  }
+
+  getCurrentUserInfo(): UserInfo {
+    return this.getItem<UserInfo>(this.CURRENT_USER_KEY);
+  }
+
+  removeCurrentUserInfo() {
+    return this.removeItem(this.CURRENT_USER_KEY);
   }
 }

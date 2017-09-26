@@ -1,3 +1,10 @@
 1. Should place usertoken in localstorage.service.ts, Common module  dependent another module
 
 2. Differ rxjs/add/observable/of and rxjs/add/operator/map
+
+3. When have command <ul class="nav navbar-nav" *ngIf="userInfo">, when click create-chess not update UI
+
+https://coursetro.com/posts/code/31/How-to-Make-an-Angular-Firebase-Chat-App
+https://developers.facebook.com/apps/341574129646198/fb-login/
+https://console.firebase.google.com/u/0/project/chess-app-b4368/authentication/providers?hl=en
+profile.php?id=100006771495413&ref=content_filter

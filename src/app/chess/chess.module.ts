@@ -5,6 +5,8 @@ import { RouterModule } from '@angular/router';
 import { CreateChessComponent } from './components/create-chess/create-chess.component';
 import { ROUTING } from './chess-routing.module';
 import { PlayChessComponent } from './components/play-chess/play-chess.component';
+import { SignMovePipe } from './pipes/sign-move.pipe';
+import { ListChessComponent } from './components/list-chess/list-chess.component';
 
 const MODULES = [
   RouterModule,
@@ -13,6 +15,7 @@ const MODULES = [
 ];
 
 const PIPES = [
+  SignMovePipe
 ];
 
 const DIRECTIVES = [
@@ -33,7 +36,8 @@ const SERVICES = [
   declarations: [
     ...COMPONENTS,
     ...PIPES,
-    ...DIRECTIVES
+    ...DIRECTIVES,
+    ListChessComponent
   ],
   providers: [
     ...SERVICES
@@ -45,10 +49,4 @@ const SERVICES = [
   ]
 })
 
-@NgModule({
-  imports: [
-    CommonModule
-  ],
-  declarations: [ ...COMPONENTS, PlayChessComponent ]
-})
 export class ChessModule { }

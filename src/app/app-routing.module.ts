@@ -7,7 +7,7 @@ import { ModuleWithProviders } from '@angular/core';
 
 export const routes: Routes = [
   {
-    path: '', redirectTo: 'create-chess', pathMatch: 'full'
+    path: '', redirectTo: 'home', pathMatch: 'full'
   }
 ];
 

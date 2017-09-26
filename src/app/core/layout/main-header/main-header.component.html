@@ -1,0 +1,36 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Chess</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+        <li><a [routerLink]="['/create-chess']" routerLinkActive="active">Create chess</a></li>
+        <li><a [routerLink]="['/list-chess']" routerLinkActive="active">List chess</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li  *ngIf="!userInfo"><a (click)="onLoginWithFacebook()">Login with facebook</a></li>
+        <li *ngIf="userInfo" class="dropdown user-dropdown" dropdown>
+          <a dropdown-open>
+            <img class="avatar" [src]="userInfo.avatar" alt="Avatar">
+            <span>{{ userInfo.name }}</span>
+            <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="javascript:voi(0)">User profile</a></li>
+            <li><a (click)="onLogout()">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div>
+</nav>

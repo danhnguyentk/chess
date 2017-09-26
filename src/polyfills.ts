@@ -72,6 +72,7 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 // import 'intl/locale-data/jsonp/en';
 
 /* Rxjs */
+import 'rxjs/add/observable/fromPromise'
 import 'rxjs/add/observable/of';
 import 'rxjs/add/observable/zip';
 import 'rxjs/add/observable/combineLatest';
@@ -89,3 +90,4 @@ import 'rxjs/add/operator/withLatestFrom';
 import 'rxjs/add/operator/delay';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/observable/forkJoin';
+import 'rxjs/add/operator/take'
